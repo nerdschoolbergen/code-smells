@@ -1,0 +1,68 @@
+Code smell: Ways to fix it
+
+* Duplicated code: extract method, extract class, pull up method, form template method
+
+* Long method: extract method, replace temp with query, replace method with method object, decompose conditional
+
+* Long parameter list: replace parameter with method, introduce parameter object, preserve whole object
+
+* Large class/divergent change/data clumps: extract class, extract subclass, extract interface, replace data value with
+  object, introduce parameter object, preserve whole object
+
+* Data class: move method, encapsulate field, encapsulate collection
+
+* Shotgun surgery: move method, move field
+
+* Feature envy: move method, move field, extract method
+
+* Primitive obsession: replace data value with object, replace type code with class
+
+* Switch statements: replace conditionals with polymorphism, replace type code with subclasses, replace parameter with
+  explicit methods, introduce null object
+
+* Speculative generality: collapse hierarchy, remove parameter, rename method, inline class
+
+* Temporary field: extract class, introduce null object
+
+* Inappropriate intimacy: move method, move field, extract class
+
+* Comments: extract method, introduce assertion
+
+
+Examples of how to employ common methods (google is your friend):
+* pull up method:
+	- pull a method up into a superclass
+
+* form template method:
+	- generalise methods so that the constituents are the same, then pull up method
+	- have the specialised parts in subclass methods that are abstract in the super class
+
+* replace conditional with polymorphism:
+	- move each "leg" of the conditional into an overriding method in a subclass, and make the original method abstract
+
+* introduce null object:
+	- rather than returning null, return an object (fex a subclass) representing the null condition (i.e. base case)
+
+* encapsulate field:
+	- make a field private and provide getter/setter
+
+* encapsulate collection:
+	- Rather than get/set for a collection, provide get, add and remove methods
+
+* Collapse hierarchy:
+	- remove unneeded classes
+
+* replace temp with query:
+	- extract expression into method
+
+* decompose conditional:
+	- extract method for condition (if part), then part and else parts
+
+* replace parameter with method:
+	- remove parameter and let the receiver invoke the method
+
+* replace type code with subclasses:
+	- replace i.e. constants with sub classes
+
+
+
