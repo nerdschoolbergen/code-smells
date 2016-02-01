@@ -9,7 +9,7 @@ Somewhere along the way code goes from good to bad. It's usually a combination o
 ### Ways to fix it
 
 * Duplicated code:
-	* Eextract method.
+	* Extract method.
 	* Extract class.
 	* Pull up method.
 	* Form template method.
