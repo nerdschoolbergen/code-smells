@@ -1,6 +1,11 @@
 # Code Smells
 Somewhere along the way code goes from good to bad. It's usually a combination of many small factors that when allowed to take hold in your project, makes it hard to work with and downright frustrating. Your code starts to smell... bad...
 
+### Requirements
+
+* Java and a IDE/text editor that can compile java and run tests.
+* Git
+
 ### Ways to fix it
 
 * Duplicated code:
