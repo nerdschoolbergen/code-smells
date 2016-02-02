@@ -21,7 +21,7 @@ public class PubPricesTest {
     }
 
     @Test
-    public void oneBeerTest() {
+    public void oneBeerCostWithNoDiscount() {
         int actualPrice = pub.computeCost(pub.ONE_BEER, false, 1);
         assertEquals(74, actualPrice);
     }
@@ -33,7 +33,7 @@ public class PubPricesTest {
     }
 
     @Test
-    public void testCidersAreCostly() throws Exception {
+    public void testCidersCost103() throws Exception {
         int actualPrice = pub.computeCost(pub.ONE_CIDER, false, 1);
         assertEquals(103, actualPrice);
     }
