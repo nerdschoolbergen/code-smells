@@ -17,10 +17,6 @@ public class Pub {
 
 
     public Pub() {
-        createMenu();
-    }
-
-    private void createMenu() {
         beverages.put(ONE_BEER, new Beverage(74, false));
         beverages.put(ONE_CIDER, new Beverage(103, false));
         beverages.put(A_PROPER_CIDER, new Beverage(110, false));
