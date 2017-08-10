@@ -1,7 +1,6 @@
-# Exercise - Fix the smelly code
+# Fix the smelly code
 
-Form groups of about 3 people and review Pub.java in nerdschool.bar (pull from the nerdschool repository on
-github). Which code smells can you find? Refactor to remove smell(s). There is a small test suite (nerdschool.bar.PubPricesTest.java)
+Form groups of about 3 people and review Pub.java in nerdschool.bar. Which code smells can you find? Refactor to remove smell(s). There is a small test suite (nerdschool.bar.PubPricesTest.java)
 that will help you along the way. Introduce more tests if you need them.
 
 
@@ -17,7 +16,7 @@ You will learn to:
 - Java dev kit: [Java SE Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 
-## Bar mess
+## Details
 
 :pencil2: Open `pom.xml` in IntelliJ by selecting *Import project* from the Welcome Screen. You can also use File --> New --> Project from existing sources. 
 
