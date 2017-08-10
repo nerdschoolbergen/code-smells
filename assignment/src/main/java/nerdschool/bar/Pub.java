@@ -21,10 +21,23 @@ public class Pub {
         Beverage oneBeer = new Beverage(ONE_BEER, 74);
         Beverage oneCider = new Beverage(ONE_CIDER, 103);
         Beverage oneProperCider = new Beverage(A_PROPER_CIDER, 110);
+        Beverage gt = Beverage.fromIngredients(
+                new IngredientAmount(Ingredient.GIN, 1),
+                new IngredientAmount(Ingredient.TONICWATER, 1),
+                new IngredientAmount(Ingredient.GREENSTUFF, 1)
+        );
+        Beverage bacardiSpecial = Beverage.fromIngredients(
+                new IngredientAmount(Ingredient.GIN, 0.5),
+                new IngredientAmount(Ingredient.RUM, 1),
+                new IngredientAmount(Ingredient.GRENADINE, 1),
+                new IngredientAmount(Ingredient.LIMEJUICE, 1)
+        );
 
         beverages.put(oneBeer.getName(), oneBeer);
         beverages.put(oneCider.getName(), oneCider);
         beverages.put(oneProperCider.getName(), oneProperCider);
+        beverages.put(GT, gt);
+        beverages.put(BACARDI_SPECIAL, bacardiSpecial);
     }
 
     public int computeCost(String drink, boolean student, int amount) {
@@ -37,17 +50,12 @@ public class Pub {
         try {
             Beverage beverage = beverages.get(drink);
             price = beverage.getPrice();
-            if (student) {
+            if (student && (drink.equals(ONE_BEER) || drink.equals(ONE_CIDER) || drink.equals(A_PROPER_CIDER))) {
                 price = price - price / 10;
             }
         } catch (Exception e) {
-         if (drink.equals(GT)) {
-                price = Ingredient.GIN.getPrice() + Ingredient.TONICWATER.getPrice() + Ingredient.GREENSTUFF.getPrice();
-            } else if (drink.equals(BACARDI_SPECIAL)) {
-                price = Ingredient.GIN.getPrice() / 2 + Ingredient.RUM.getPrice() + Ingredient.GRENADINE.getPrice() + Ingredient.LIMEJUICE.getPrice();
-            } else {
-                throw new RuntimeException("No such drink exists");
-            }
+
+            throw new RuntimeException("No such drink exists");
         }
         return price * amount;
     }
