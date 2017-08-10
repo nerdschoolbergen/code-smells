@@ -85,4 +85,10 @@ public class PubPricesTest {
     public void testCanOrderMoreThanTwoBeers() throws Exception {
         pub.computeCost(Pub.ONE_BEER, false, 5);
     }
+
+    @Test
+    public void canOrderTwoDrinks() throws Exception {
+        int actualPrice = pub.computeCost(Pub.GT, false, 2);
+        assertEquals(230, actualPrice);
+    }
 }
