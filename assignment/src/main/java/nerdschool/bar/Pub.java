@@ -17,11 +17,10 @@ public class Pub {
         initialiseBeverages();
     }
 
-
     private void initialiseBeverages() {
-        Beverage oneBeer = new Beverage(ONE_BEER, 74);
-        Beverage oneCider = new Beverage(ONE_CIDER, 103);
-        Beverage oneProperCider = new Beverage(A_PROPER_CIDER, 110);
+        Beverage oneBeer = new LowAlchoholBeverage(ONE_BEER, 74);
+        Beverage oneCider = new LowAlchoholBeverage(ONE_CIDER, 103);
+        Beverage oneProperCider = new LowAlchoholBeverage(A_PROPER_CIDER, 110);
 
         beverages.put(oneBeer.getName(), oneBeer);
         beverages.put(oneCider.getName(), oneCider);
@@ -43,37 +42,13 @@ public class Pub {
             }
         } catch (Exception e) {
          if (drink.equals(GT)) {
-                price = ginUnit() + tonicWaterUnit() + grennStuffUnit();
+                price = Ingredient.GIN.getPrice() + Ingredient.TONICWATER.getPrice() + Ingredient.GREENSTUFF.getPrice();
             } else if (drink.equals(BACARDI_SPECIAL)) {
-                price = ginUnit() / 2 + rumUnit() + grenadineUnit() + limeJuiceUnit();
+                price = Ingredient.GIN.getPrice() / 2 + Ingredient.RUM.getPrice() + Ingredient.GRENADINE.getPrice() + Ingredient.LIMEJUICE.getPrice();
             } else {
                 throw new RuntimeException("No such drink exists");
             }
         }
         return price * amount;
-    }
-
-    private int rumUnit() {
-        return 65;
-    }
-
-    private int grenadineUnit() {
-        return 10;
-    }
-
-    private int limeJuiceUnit() {
-        return 10;
-    }
-
-    private int grennStuffUnit() {
-        return 10;
-    }
-
-    private int tonicWaterUnit() {
-        return 20;
-    }
-
-    private int ginUnit() {
-        return 85;
     }
 }
