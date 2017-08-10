@@ -1,5 +1,7 @@
 package nerdschool.bar;
 
+import java.util.HashMap;
+import java.util.Map;
 
 public class Pub {
 
@@ -9,32 +11,46 @@ public class Pub {
     public static final String GT = "gt";
     public static final String BACARDI_SPECIAL = "bacardi_special";
 
+    Map<String, Beverage> beverages = new HashMap<>();
+
+    public Pub() {
+        initialiseBeverages();
+    }
+
+
+    private void initialiseBeverages() {
+        Beverage oneBeer = new Beverage(ONE_BEER, 74);
+        Beverage oneCider = new Beverage(ONE_CIDER, 103);
+        Beverage oneProperCider = new Beverage(A_PROPER_CIDER, 110);
+
+        beverages.put(oneBeer.getName(), oneBeer);
+        beverages.put(oneCider.getName(), oneCider);
+        beverages.put(oneProperCider.getName(), oneProperCider);
+    }
+
     public int computeCost(String drink, boolean student, int amount) {
 
         if (amount > 2 && (drink == GT || drink == BACARDI_SPECIAL)) {
             throw new RuntimeException("Too many drinks, max 2.");
         }
         int price;
-        if (drink.equals(ONE_BEER)) {
-            price = 74;
+
+        try {
+            Beverage beverage = beverages.get(drink);
+            price = beverage.getPrice();
+            if (student) {
+                price = price - price / 10;
+            }
+        } catch (Exception e) {
+         if (drink.equals(GT)) {
+                price = ginUnit() + tonicWaterUnit() + grennStuffUnit();
+            } else if (drink.equals(BACARDI_SPECIAL)) {
+                price = ginUnit() / 2 + rumUnit() + grenadineUnit() + limeJuiceUnit();
+            } else {
+                throw new RuntimeException("No such drink exists");
+            }
         }
-        else if (drink.equals(ONE_CIDER)) {
-            price = 103;
-        }
-        else if (drink.equals(A_PROPER_CIDER)) price = 110;
-        else if (drink.equals(GT)) {
-            price = ginUnit() + tonicWaterUnit() + grennStuffUnit();
-        }
-        else if (drink.equals(BACARDI_SPECIAL)) {
-            price = ginUnit()/2 + rumUnit() + grenadineUnit() + limeJuiceUnit();
-        }
-        else {
-            throw new RuntimeException("No such drink exists");
-        }
-        if (student && (drink == ONE_CIDER || drink == ONE_BEER || drink == A_PROPER_CIDER)) {
-            price = price - price/10;
-        }
-        return price*amount;
+        return price * amount;
     }
 
     private int rumUnit() {
