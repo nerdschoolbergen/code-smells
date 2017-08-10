@@ -18,9 +18,9 @@ public class Pub {
     }
 
     private void initialiseBeverages() {
-        Beverage oneBeer = new LowAlchoholBeverage(ONE_BEER, 74);
-        Beverage oneCider = new LowAlchoholBeverage(ONE_CIDER, 103);
-        Beverage oneProperCider = new LowAlchoholBeverage(A_PROPER_CIDER, 110);
+        Beverage oneBeer = new Beverage(ONE_BEER, 74);
+        Beverage oneCider = new Beverage(ONE_CIDER, 103);
+        Beverage oneProperCider = new Beverage(A_PROPER_CIDER, 110);
 
         beverages.put(oneBeer.getName(), oneBeer);
         beverages.put(oneCider.getName(), oneCider);

@@ -1,6 +1,6 @@
 package nerdschool.bar;
 
-public abstract class Beverage {
+public class Beverage {
 
     private String name;
     private int price;
