@@ -1,7 +1,7 @@
 package nerdschool.bar;
 
-public class Pub {
 
+public class Pub {
 
     public static final String ONE_BEER = "hansa";
     public static final String ONE_CIDER = "grans";
@@ -23,10 +23,10 @@ public class Pub {
         }
         else if (drink.equals(A_PROPER_CIDER)) price = 110;
         else if (drink.equals(GT)) {
-            price = gin() + tonicWater() + greenStuff();
+            price = ginUnit() + tonicWaterUnit() + grennStuffUnit();
         }
         else if (drink.equals(BACARDI_SPECIAL)) {
-            price = gin()/2 + rum() + grenadine() + limeJuice();
+            price = ginUnit()/2 + rumUnit() + grenadineUnit() + limeJuiceUnit();
         }
         else {
             throw new RuntimeException("No such drink exists");
@@ -37,27 +37,27 @@ public class Pub {
         return price*amount;
     }
 
-    private int rum() {
+    private int rumUnit() {
         return 65;
     }
 
-    private int grenadine() {
+    private int grenadineUnit() {
         return 10;
     }
 
-    private int limeJuice() {
-        return 10;
-    }
-    
-    private int greenStuff() {
+    private int limeJuiceUnit() {
         return 10;
     }
 
-    private int tonicWater() {
+    private int grennStuffUnit() {
+        return 10;
+    }
+
+    private int tonicWaterUnit() {
         return 20;
     }
 
-    private int gin() {
+    private int ginUnit() {
         return 85;
     }
 }
