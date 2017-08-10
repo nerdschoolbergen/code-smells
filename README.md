@@ -23,7 +23,7 @@ clean code and how to refactor your smelly code with test coverage.
 ## Exercises
 This repository contains a set of exercises organized in folders. Each folder contains a `README.md` describing the exercise.
 
-- [Exercise 1](exercise-1/)
+- [Exercise](assignment/)
 
 
 ## Helpful resources
