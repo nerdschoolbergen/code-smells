@@ -7,7 +7,7 @@ to take hold in your project, makes it hard to work with and downright frustrati
 ## [Open presentation slides](https://docs.google.com/presentation/d/1E53FHXGFH7p929PJPCSUwT-rF0yTP_XIR6ppxaVcHrM/edit#slide=id.g210fcad1cb_1_0)
 
 ## Focus of this lesson
-This workshop will teach you some of the most common code smells and how to fix them. You'll get to know the basics of 
+In this workshop you'll work together in a team. You'll get to know some of the most common code smells and how to fix them. After this workshop you'll know the basics of 
 clean code and how to refactor your smelly code with test coverage. 
 
 ## What you need
