@@ -4,7 +4,7 @@ Somewhere along the way code goes from good to bad. It's usually a combination o
 to take hold in your project, makes it hard to work with and downright frustrating. Your code starts to smell... bad...
 
 
-## [Open presentation slides](https://docs.google.com/presentation/d/1E53FHXGFH7p929PJPCSUwT-rF0yTP_XIR6ppxaVcHrM/edit#slide=id.g210fcad1cb_1_0)
+## [Open presentation slides](https://docs.google.com/presentation/d/1ORzLE5BdaLhQxudjh3xlWYCJEwQCTWWZZ5C3pT1eHdM)
 
 ## Focus of this lesson
 In this workshop you'll work together in a team. You'll get to know some of the most common code smells and how to fix them. After this workshop you'll know the basics of 
