@@ -1,4 +1,4 @@
 *.iml
 .idea
 out
-assignment/target
+target

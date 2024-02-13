@@ -20,16 +20,15 @@ clean code and how to refactor your smelly code with test coverage.
 * Start by cloning this repository into a folder on your computer. If you've never used git before, you can alternatively use the the "Download ZIP" button to the right.
 * Although you have this `README.md` file on your computer it's easier to read it on GitHub, so we recommend you keep this page open with the exercise tasks.
 
-## Exercises
-This repository contains a set of exercises organized in folders. Each folder contains a `README.md` describing the exercise.
+## Exercise
 
-- [Exercise](assignment/)
+Go to [Exercise - Fix the smelly code](exercise.md) to get started.
 
 
 ## Helpful resources
 - [IntelliJ video tutorials](https://www.jetbrains.com/idea/documentation/)
-- [IntelliJ for Eclipse users](https://www.jetbrains.com/help/idea/2016.3/eclipse.html)
-- [IntelliJ testing](https://www.jetbrains.com/help/idea/2016.3/testing.html)
+- [IntelliJ for Eclipse users](https://www.jetbrains.com/help/idea/migrating-from-eclipse-to-intellij-idea.html)
+- [IntelliJ testing](https://www.jetbrains.com/help/idea/tests-in-ide.html)
 
 
 ## Shortlist of code smells and ways to fix them
