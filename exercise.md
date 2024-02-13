@@ -15,8 +15,7 @@ You will learn to:
 - IntelliJ Community Edition: [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/)
 - Java dev kit: [Java SE Development Kit](https://www.oracle.com/java/technologies/downloads/)
 
-:question: Not familiar with IntelliJ? Take a look at the [interactive training course inside IntelliJ](https://www.jetbrains.com/help/idea/feature-trainer.html#start-a-lesson-from-the-welcome-screen) or the
-[IntelliJ video tutorials](https://www.jetbrains.com/idea/documentation/) to learn more about IntelliJ.
+:question: Not familiar with IntelliJ? Take a look at the [User interface](https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html) docs and the [interactive training course inside IntelliJ](https://www.jetbrains.com/help/idea/feature-trainer.html#start-a-lesson-from-the-welcome-screen).
 
 ## Details
 
