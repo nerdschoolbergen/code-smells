@@ -28,7 +28,8 @@ Go to [Exercise - Fix the smelly code](exercise.md) to get started.
 
 ## Helpful resources
 
-- [IntelliJ video tutorials](https://www.jetbrains.com/idea/documentation/)
+- [IntelliJ User interface](https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html)
+- [IntelliJ interactive training course](https://www.jetbrains.com/help/idea/feature-trainer.html#start-a-lesson-from-the-welcome-screen)
 - [IntelliJ for Eclipse users](https://www.jetbrains.com/help/idea/migrating-from-eclipse-to-intellij-idea.html)
 - [IntelliJ testing](https://www.jetbrains.com/help/idea/tests-in-ide.html)
 
