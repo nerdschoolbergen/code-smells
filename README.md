@@ -12,7 +12,7 @@ clean code and how to refactor your smelly code with test coverage.
 
 ## What you need
 - IntelliJ Community Edition: [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/)
-- Java dev kit: [Java SE Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+- Java dev kit: [Java SE Development Kit](https://www.oracle.com/java/technologies/downloads/)
 - Git 
 
 ## How to get started
