@@ -7,13 +7,14 @@ to take hold in your project, makes it hard to work with and downright frustrati
 ## [Open presentation slides](https://docs.google.com/presentation/d/19rQAnOHE2CcQ-hGvmDVPpvsr5wjYGjp6WVM8caHFLF0/edit?usp=sharing)
 
 ## Focus of this lesson
+
 In this workshop you'll work together in a team. You'll get to know some of the most common code smells and how to fix them. After this workshop you'll know the basics of 
 clean code and how to refactor your smelly code with test coverage. 
 
 ## What you need
+
 - IntelliJ Community Edition: [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/)
 - Java dev kit: [Java SE Development Kit](https://www.oracle.com/java/technologies/downloads/)
-- Git 
 
 ## How to get started
 
@@ -26,6 +27,7 @@ Go to [Exercise - Fix the smelly code](exercise.md) to get started.
 
 
 ## Helpful resources
+
 - [IntelliJ video tutorials](https://www.jetbrains.com/idea/documentation/)
 - [IntelliJ for Eclipse users](https://www.jetbrains.com/help/idea/migrating-from-eclipse-to-intellij-idea.html)
 - [IntelliJ testing](https://www.jetbrains.com/help/idea/tests-in-ide.html)
