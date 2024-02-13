@@ -1,8 +1,6 @@
 package nerdschool.bar;
 
 public class Pub {
-
-
     public static final String ONE_BEER = "hansa";
     public static final String ONE_CIDER = "grans";
     public static final String A_PROPER_CIDER = "strongbow";
