@@ -1,4 +1,4 @@
-import java.util.Map;
+package nerdschool.bar;
 
 public class Pub {
     public static final String ONE_BEER = "hansa";
