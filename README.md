@@ -1,8 +1,6 @@
 # Refactoring and code smells
 
-Somewhere along the way code goes from good to bad. It's usually a combination of many small factors that when allowed 
-to take hold in your project, makes it hard to work with and downright frustrating. Your code starts to smell... bad...
-
+Somewhere along the way code goes from good to bad. It's usually a combination of many small factors that when allowed to take hold in your project, makes it hard to work with and downright frustrating. Your code starts to smell... bad...
 
 ## [Open presentation slides](https://docs.google.com/presentation/d/1cP3JxkT8BOjSYKZzdDzqRk_WDjTv_tbs35clENDp9kc/edit?usp=sharing)
 
@@ -33,167 +31,31 @@ Go to [Exercise - Fix the smelly code](exercise.md) to get started.
 - [IntelliJ for Eclipse users](https://www.jetbrains.com/help/idea/migrating-from-eclipse-to-intellij-idea.html)
 - [IntelliJ testing](https://www.jetbrains.com/help/idea/tests-in-ide.html)
 
-## Shortlist of code smells and ways to fix them
+See [smells.md](smells.md) for a shortlist of code smells and how to fix them.
 
-### Code Smell 1: Duplicated code
+### Symbols and notation used in exercises
 
-> Copy/paste is dangerous! Can be that different parts of the code do the same thing. Or different algorithms that give same result.
+#### Icons with special meaning
 
-Collect into a single place, and adhere to the Single Responsibility Principle.
+- :pencil2: - A task you should do
+- :book: - A section of text to read (no tasks, just information).
+- :bulb: - Additional information.
+- :exclamation: - Something important.
+- :question: - Open-ended question for the reader ("What do you think would happen if...")
+- :poop: - Bad practice (don't-do-this)
+- :star: - A bonus task (not required)
 
-- Extract method.
-- Extract class.
-- Pull up method.
-- Form template method.
+#### Keyboard keys
 
-### Code Smell 2: Long method
+Will look like this:
 
-> As functionality grows over time, so do methods. How do we know it's too long?
-Line count is one measure, number of execution paths is a better measure.
+<kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>C</kbd>
 
-Split into smaller methods. Make sure each does only one thing. Split into several classes, make sure each class has a Single Responsibility.
+#### Diff blocks
 
-- Extract method.
-- Replace temp with query.
-- Replace method with method object.
-- Decompose conditional.
+Emphasizes how lines of text should change.
 
-### Code Smell 3: Long parameter list
-
-> More than three or four parameters for a method.
-
-- Replace parameter with method.
-- Introduce parameter object.
-- Preserve whole object.
-
-### Code Smell 4: Large class/divergent change/data clumps
-
-> Data clumps is a specific type of duplication where the same or similar group of fields can be spotted in different classes.
-
-Extract the clump into a class with the methods from the different classes.
-
-- Extract class.
-- Extract subclass.
-- Extract interface.
-- Replace data value with object.
-- Introduce parameter object.
-- Preserve whole object.
-
-### Code Smell 4: Data class
-
-> All fields and no functionality makes the object a dull quiet thing.
-
-Look around the code for functionality that naturally belongs with the fields and move it into the class.
-
-- Move method.
-- Encapsulate field.
-- Encapsulate collection.
-
-### Code Smell 4: Shotgun surgery
-
-Changing one small thing idea-wise ends up changing lots of similar changes all over the code.
-
-Chances are, you are missing an object. Introduce one, so that changes to the idea can be expressed in a single place.
-
-- Move method.
-- Move field.
-
-### Code Smell 5: Feature envy/inappropriate intimacy
-
-> A method is doing operations entirely on an object or values outside the current class. Classes are reaching into each other for values.
-
-If the functionality is in the wrong place, move it to the object with the values it wants to be with. You may need to move it to a new class, or merge classes.
-
-- Move method.
-- Move field.
-- Extract method.
-
-### Code Smell 6: Primitive obsession
-
-> A programmer who thinks it’s too much overhead to use an object for just a few simple values. This is what compilers are for.
-
-- Replace data value with object.
-- Replace type code with class.
-
-### Code Smell 7: Switch statements
-
-> Switching on an object property to do different things often means that property has meaning, not just a simple value.
-
-Consider replacing switch statement with polymorphism – make each value of the switching property determine a new subclass.
-
-- Replace conditionals with polymorphism.
-- Replace type code with subclasses.
-- Replace parameter with explicit methods.
-- Introduce null object.
-
-### Code Smell 8: Speculative generality
-
-> The creation of a solution that will solve that whole class of problems, and all their varieties.
-
-You Ain't Gonna Need It. Take it out. Simple code is always better.
-
-- Collapse hierarchy.
-- Remove parameter.
-- Rename method.
-- Inline class.
-
-### Code Smell 9: Temporary field
-
-> Temporary fields get their values (and thus are needed by objects) only under certain circumstances. Outside of these circumstances, they’re empty.
-
-- Extract class.
-- Introduce null object.
-
-### Code Smell 10: Comments
-
-Comments lie. Make your code expressive enough to tell the truth instead by paying attention to good naming.
-
-- Extract method.
-- Introduce assertion.
-
-## Examples of how to employ common refactoring methods
-
-### Pull up method
-
-Pull a method up into a superclass.
-
-### Form template method
-
-- Generalise methods so that the constituents are the same, then pull up method.
-- Have the specialised parts in subclass methods that are abstract in the super class.
-
-### Replace conditional with polymorphism
-
-Move each "leg" of the conditional into an overriding method in a subclass, and make the original method abstract.
-
-### Introduce null object
-
-Rather than returning null, return an object (fex a subclass) representing the null condition (i.e. base case).
-
-### Encapsulate field
-
-Make a field private and provide getter/setter.
-
-### Encapsulate collection
-
-Rather than get/set for a collection, provide get, add and remove methods.
-
-### Collapse hierarchy
-
-Remove unneeded classes.
-
-### Replace temp with query
-
-Extract expression into method.
-
-### Decompose conditional
-
-Extract method for condition (if part), then part and else parts.
-
-### Replace parameter with method
-
-Remove parameter and let the receiver invoke the method.
-
-### Replace type code with subclasses
-
-Replace i.e. constants with sub classes.
+```diff
+- this text was removed
++ and replaced with this text
+```
