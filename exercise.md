@@ -10,6 +10,11 @@ You will learn to:
 - Fix code smells
 - Refactor with tests
 
+## How to get started
+
+* Start by cloning this repository into a folder on your computer. If you've never used git before, you can alternatively use the the "Download ZIP" button to the right.
+* Although you have this `README.md` file on your computer it's easier to read it on GitHub, so we recommend you keep this page open with the exercise tasks.
+
 ## Required software and tools for this exercise
 
 - IntelliJ Community Edition: [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/)
