@@ -1,4 +1,4 @@
-# Clean code and refactoring
+# Refactoring and code smells
 
 Somewhere along the way code goes from good to bad. It's usually a combination of many small factors that when allowed 
 to take hold in your project, makes it hard to work with and downright frustrating. Your code starts to smell... bad...
