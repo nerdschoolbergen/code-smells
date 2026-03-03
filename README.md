@@ -4,7 +4,7 @@ Somewhere along the way code goes from good to bad. It's usually a combination o
 to take hold in your project, makes it hard to work with and downright frustrating. Your code starts to smell... bad...
 
 
-## [Open presentation slides](https://docs.google.com/presentation/d/19rQAnOHE2CcQ-hGvmDVPpvsr5wjYGjp6WVM8caHFLF0/edit?usp=sharing)
+## [Open presentation slides](https://docs.google.com/presentation/d/1cP3JxkT8BOjSYKZzdDzqRk_WDjTv_tbs35clENDp9kc/edit?usp=sharing)
 
 ## Focus of this lesson
 
