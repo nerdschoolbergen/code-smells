@@ -7,61 +7,48 @@ public class Pub {
     public static final String GT = "gt";
     public static final String BACARDI_SPECIAL = "bacardi_special";
 
-    public int computeCost(String drink, boolean student, int amount) {
+    private static final Map<String, Integer> DRINK_PRICES = Map.of(
+        ONE_BEER, 74,
+        ONE_CIDER, 103,
+        A_PROPER_CIDER, 110
+    );
 
-        if (amount > 2 && (drink == GT || drink == BACARDI_SPECIAL)) {
+    private static final Map<String, Integer> INGREDIENT_PRICES = Map.of(
+        "rum", 65,
+        "grenadine", 10,
+        "lime juice", 10,
+        "green stuff", 10,
+        "tonic water", 20,
+        "gin", 85
+    );
+
+    public int computeCost(String drink, boolean student, int amount) {
+        if (amount > 2 && (drink.equals(GT) || drink.equals(BACARDI_SPECIAL))) {
             throw new RuntimeException("Too many drinks, max 2.");
         }
-        int price;
-        if (drink.equals(ONE_BEER)) {
-            price = 74;
+
+        int price = getDrinkPrice(drink);
+
+        if (student && isEligibleForStudentDiscount(drink)) {
+            price -= price / 10; // 10% discount
         }
-        else if (drink.equals(ONE_CIDER)) {
-            price = 103;
-        }
-        else if (drink.equals(A_PROPER_CIDER)) price = 110;
-        else if (drink.equals(GT)) {
-            price = ingredient6() + ingredient5() + ingredient4();
-        }
-        else if (drink.equals(BACARDI_SPECIAL)) {
-            price = ingredient6()/2 + ingredient1() + ingredient2() + ingredient3();
-        }
-        else {
+        return price * amount;
+    }
+
+    private int getDrinkPrice(String drink) {
+        if (DRINK_PRICES.containsKey(drink)) {
+            return DRINK_PRICES.get(drink);
+        } else if (drink.equals(GT)) {
+            return INGREDIENT_PRICES.get("gin") + INGREDIENT_PRICES.get("tonic water") + INGREDIENT_PRICES.get("green stuff");
+        } else if (drink.equals(BACARDI_SPECIAL)) {
+            return (INGREDIENT_PRICES.get("gin") / 2) + INGREDIENT_PRICES.get("rum") +
+                   INGREDIENT_PRICES.get("grenadine") + INGREDIENT_PRICES.get("lime juice");
+        } else {
             throw new RuntimeException("No such drink exists");
         }
-        if (student && (drink == ONE_CIDER || drink == ONE_BEER || drink == A_PROPER_CIDER)) {
-            price = price - price/10;
-        }
-        return price*amount;
     }
 
-    //one unit of rum
-    private int ingredient1() {
-        return 65;
-    }
-
-    //one unit of grenadine
-    private int ingredient2() {
-        return 10;
-    }
-
-    //one unit of lime juice
-    private int ingredient3() {
-        return 10;
-    }
-    
-    //one unit of green stuff
-    private int ingredient4() {
-        return 10;
-    }
-
-    //one unit of tonic water
-    private int ingredient5() {
-        return 20;
-    }
-
-    //one unit of gin
-    private int ingredient6() {
-        return 85;
+    private boolean isEligibleForStudentDiscount(String drink) {
+        return drink.equals(ONE_CIDER) || drink.equals(ONE_BEER) || drink.equals(A_PROPER_CIDER);
     }
 }
